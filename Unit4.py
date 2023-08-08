@@ -1,9 +1,16 @@
-list_1 = [11, 92, 1, 42, 15, 12, 11, 81]
-max_count = 0
+list_1 = [2, 4, 6, 8, 10, 10, 8, 6, 4, 2]
+list_2 = [3, 9, 12, 15, 18]
 
-for i in range(len(list_1)):
-    if (list_1[i-2] + list_1[i-1] + list_1[i]) > max_count:
-        max_count = list_1[i-2] + list_1[i-1] + list_1[i]
-        max_idx = i - 1
+set_1 = set(list_1)
+set_2 = set(list_2)
 
-print(f'Макс. кол-во ягод {max_count}, собрано для куста {max_idx+1}')
+array_1 = []
+
+for i in set_1:
+    if i in set_1 and i in set_2:
+        array_1.append(i)
+
+if array_1 == []:
+    print('Повторяющихся чисел нет')
+else:
+    print(*array_1)
